@@ -18,17 +18,30 @@ class Main
             new student(90, "Andy", "Las Vegas"),
             new student(100, "George",  "Chicago")
         };
-		
+        
+        // Show the unsorted list
         System.out.println("*UNSORTED*");
         System.out.println("");
 
+        // Loop through and print each item on the list
         for (int i = 0; i < studentList.length; i++) {
             System.out.println(studentList[i].toString());
         }
   
+        // Sort list by ROLL NO
         System.out.println("\n**SORTED BY ROLL NO**");
         CustomSelectionSort.sortByRollNumber(studentList);
         
+        // Show roll number sorted list
+        for (int i = 0; i < studentList.length; i++) {
+            System.out.println(studentList[i].toString());
+        }
+
+        // Sort list by student name
+        System.out.println("\n**SORTED BY STUDENT NAME**");
+        CustomSelectionSort.sortByName(studentList);
+
+        // Show name sorted list
         for (int i = 0; i < studentList.length; i++) {
             System.out.println(studentList[i].toString());
         }
