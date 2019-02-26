@@ -20,4 +20,12 @@ public class CustomSelectionSort
             }
         }
     }
+
+    public static void sortByRollNumber(student[] students) {
+
+    }
+
+    public static void sortByName(student[] students) {
+        
+    }
 }
