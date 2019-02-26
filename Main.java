@@ -18,6 +18,8 @@ class Main
             new student(90, "Andy", "Las Vegas"),
             new student(100, "George",  "Chicago")
         };
+
+        CustomSelectionSort sorter = new CustomSelectionSort();
         
         // Show the unsorted list
         System.out.println("*UNSORTED*");
@@ -30,7 +32,7 @@ class Main
   
         // Sort list by ROLL NO
         System.out.println("\n**SORTED BY ROLL NO**");
-        CustomSelectionSort.sortByRollNumber(studentList);
+        sorter.sortByRollNumber(studentList);
         
         // Show roll number sorted list
         for (int i = 0; i < studentList.length; i++) {
@@ -39,7 +41,7 @@ class Main
 
         // Sort list by student name
         System.out.println("\n**SORTED BY STUDENT NAME**");
-        CustomSelectionSort.sortByName(studentList);
+        sorter.sortByName(studentList);
 
         // Show name sorted list
         for (int i = 0; i < studentList.length; i++) {

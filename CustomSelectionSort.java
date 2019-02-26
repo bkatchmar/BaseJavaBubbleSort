@@ -4,24 +4,7 @@ import java.io.*;
 
 public class CustomSelectionSort
 {
-    // Sort a String array using selection sort.
-    public static void sort(String[] a)
-    {
-        for (int i=0; i<a.length-1; i++)
-        {
-            for (int j=i+1; j<a.length; j++)
-            {
-                if (a[i].compareTo(a[j]) > 0)
-                {
-                    String holder = a[j];
-                    a[j] = a[i];
-                    a[i] = holder;
-                }
-            }
-        }
-    }
-
-    public static void sortByRollNumber(student[] students) {
+    public void sortByRollNumber(student[] students) {
         // First pass for the selection sort
         for (int x = 0; x < students.length; x++) {
             // Second pass for the selection sort
@@ -38,7 +21,7 @@ public class CustomSelectionSort
         }
     }
 
-    public static void sortByName(student[] students) {
+    public void sortByName(student[] students) {
         // First pass for the selection sort
         for (int x = 0; x < students.length; x++) {
             // Second pass for the selection sort
