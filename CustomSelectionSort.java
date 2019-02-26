@@ -4,35 +4,35 @@ import java.io.*;
 
 public class CustomSelectionSort
 {
-    public void sortByRollNumber(student[] students) {
+    public void sortByRollNumber(ArrayList<student> students) {
         // First pass for the selection sort
-        for (int x = 0; x < students.length; x++) {
+        for (int x = 0; x < students.size(); x++) {
             // Second pass for the selection sort
-            for (int y = 0; y < students.length; y++) {
-                student first = students[x];
-                student second = students[y];
+            for (int y = 0; y < students.size(); y++) {
+                student first = students.get(x);
+                student second = students.get(y);
 
                 if (first.rollno < second.rollno) {
-                    student temp = students[y];
-                    students[y] = students[x];
-                    students[x] = temp;
+                    student temp = students.get(y);
+                    students.set(y, students.get(x));
+                    students.set(x, temp);
                 }
             }
         }
     }
 
-    public void sortByName(student[] students) {
+    public void sortByName(ArrayList<student> students) {
         // First pass for the selection sort
-        for (int x = 0; x < students.length; x++) {
+        for (int x = 0; x < students.size(); x++) {
             // Second pass for the selection sort
-            for (int y = 0; y < students.length; y++) {
-                student first = students[x];
-                student second = students[y];
+            for (int y = 0; y < students.size(); y++) {
+                student first = students.get(x);
+                student second = students.get(y);
 
                 if (first.name.compareTo(second.name) < 0) {
-                    student temp = students[y];
-                    students[y] = students[x];
-                    students[x] = temp;
+                    student temp = students.get(y);
+                    students.set(y, students.get(x));
+                    students.set(x, temp);
                 }
             }
         }
